@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: Superlog Management API
+  title: Superlog management API
   version: 1.0.0
   description: |
     Programmatic surface for provisioning projects, ingest keys, and GitHub
