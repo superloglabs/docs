@@ -8,11 +8,39 @@
   "favicon": "/favicon.svg",
   "navigation": {
     "pages": [
-      "index",
       {
         "group": "API Reference",
         "pages": [
           "api-reference/introduction"
+        ]
+      },
+      "index",
+      {
+        "group": "Projects",
+        "pages": [
+          "api-reference/projects/create",
+          "api-reference/projects/list",
+          "api-reference/projects/get",
+          "api-reference/projects/update"
+        ]
+      },
+      {
+        "group": "API Keys",
+        "pages": [
+          "api-reference/api-keys/mint",
+          "api-reference/api-keys/list"
+        ]
+      },
+      {
+        "group": "GitHub Integration",
+        "pages": [
+          "api-reference/github/mint-org-install-url",
+          "api-reference/github/mint-project-install-url",
+          "api-reference/github/list-installations",
+          "api-reference/github/list-installation-repos",
+          "api-reference/github/list-repo-grants",
+          "api-reference/github/grant-repo",
+          "api-reference/github/revoke-repo"
         ]
       }
     ]
@@ -52,5 +80,8 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
+  },
+  "api": {
+    "openapi": "api-reference/openapi.yaml"
   }
 }
