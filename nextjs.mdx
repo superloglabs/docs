@@ -1,4 +1,4 @@
-# NextJS Quickstart
+# Next.js Quickstart
 
 Superlog accepts OpenTelemetry data via OTLP/HTTP. Next.js has a built-in `instrumentation.ts` hook that runs once at server startup — that’s where we wire up the OTel SDK.
 
@@ -31,7 +31,7 @@ That’s it. Run `next dev`, hit a page, and traces appear in Superlog → **E
 
 `@vercel/otel` is traces-only by design — it does not export logs or metrics. If that’s all you need, stop here. If you want correlated logs and metrics alongside your traces (so a slow span links to the log line that explains it), use the full setup below.
 
-## **Full setup (traces \+ logs \+ metrics)**
+## **Full setup (traces + logs + metrics)**
 
 For all three signals, swap `@vercel/otel` for the lower-level `@opentelemetry/sdk-node`. The Next.js docs [**recommend this fallback explicitly**](https://nextjs.org/docs/app/guides/open-telemetry#manual-opentelemetry-configuration) when `@vercel/otel`’s surface isn’t enough. Tradeoff: this path doesn’t run on the Edge runtime, and on Vercel you lose platform features like Session Tracing — guard with `process.env.NEXT_RUNTIME === 'nodejs'` and any Edge routes will silently skip instrumentation.
 
